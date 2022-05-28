@@ -34,12 +34,45 @@ public class CoffeeItems extends javax.swing.JInternalFrame {
         CoffeeItems = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        LatteIced = new javax.swing.JButton();
+        AmericanoIced = new javax.swing.JButton();
+        AmericanoH = new javax.swing.JButton();
+        LatteH = new javax.swing.JButton();
+        CappuccinoH = new javax.swing.JButton();
+        CappuccinoIced = new javax.swing.JButton();
+        HazelnutIced = new javax.swing.JButton();
+        WChocoIced = new javax.swing.JButton();
+        WChocoH = new javax.swing.JButton();
+        HazelnutH = new javax.swing.JButton();
+        ButterH = new javax.swing.JButton();
+        ButterIced = new javax.swing.JButton();
+        VanillaH = new javax.swing.JButton();
+        VanillaIced = new javax.swing.JButton();
+        MacadamiaH = new javax.swing.JButton();
+        MacadamiaIced = new javax.swing.JButton();
+        SCaramelH = new javax.swing.JButton();
+        SCaramelIced = new javax.swing.JButton();
+        CaramelH = new javax.swing.JButton();
+        CaramelIced = new javax.swing.JButton();
+        MochaH = new javax.swing.JButton();
+        MochaIced = new javax.swing.JButton();
+        MatchaH = new javax.swing.JButton();
+        MatchaIced = new javax.swing.JButton();
+        SCaramelEspr = new javax.swing.JButton();
+        SCaramelCream = new javax.swing.JButton();
+        PPLatteIced = new javax.swing.JButton();
+        CaramelEspr = new javax.swing.JButton();
+        CaramelCream = new javax.swing.JButton();
+        ChocoEspr = new javax.swing.JButton();
+        ChocoCream = new javax.swing.JButton();
+        MatchaEspr = new javax.swing.JButton();
+        MatchaCream = new javax.swing.JButton();
+        WChocoEspr = new javax.swing.JButton();
+        WChocoCream = new javax.swing.JButton();
+        CnCEspr = new javax.swing.JButton();
+        CnCCream = new javax.swing.JButton();
+        VanillaEspr = new javax.swing.JButton();
+        VanillaCream = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -49,30 +82,324 @@ public class CoffeeItems extends javax.swing.JInternalFrame {
         jLabel12.setBackground(new java.awt.Color(204, 102, 0));
         jLabel12.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel12.setText("Frappuccino");
-        CoffeeItems.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
+        CoffeeItems.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, -1, -1));
 
         jLabel13.setBackground(new java.awt.Color(204, 102, 0));
         jLabel13.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel13.setText("Espresso");
-        CoffeeItems.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, -1));
+        CoffeeItems.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Salted Caramel", "Caramel", "Chocolate", "White Chocolate", "Cookies and Cream", "Matcha", "Vanilla", " ", " ", " " }));
-        CoffeeItems.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 230, 40));
+        LatteIced.setText("Latte - Iced");
+        LatteIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LatteIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(LatteIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 40));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Espresso", "Cream" }));
-        CoffeeItems.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 230, 40));
+        AmericanoIced.setText("Americano - Iced");
+        AmericanoIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AmericanoIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(AmericanoIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, 40));
 
-        jButton2.setText("Add");
-        CoffeeItems.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, -1));
+        AmericanoH.setText("Americano - Hot");
+        AmericanoH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AmericanoHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(AmericanoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 120, 40));
 
-        jButton3.setText("Add");
-        CoffeeItems.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 420, -1, -1));
+        LatteH.setText("Latte - Hot");
+        LatteH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LatteHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(LatteH, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, 40));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Americano", "Latte", "Cappuccino", "White Chocolate", "Butterscotch", "Hazelnut", "Vanilla", "Macadamia", "Salted Caramel", "Caramel", "Mocha", "Matcha", "Pastry Project Latte", " ", " " }));
-        CoffeeItems.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 230, 40));
+        CappuccinoH.setText("Cappuccino - Hot");
+        CappuccinoH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CappuccinoHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CappuccinoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, 40));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hot", "Iced", " ", " ", " " }));
-        CoffeeItems.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 230, 40));
+        CappuccinoIced.setText("Cappuccino - Iced");
+        CappuccinoIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CappuccinoIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CappuccinoIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, 40));
+
+        HazelnutIced.setText("Hazelnut - Iced");
+        HazelnutIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HazelnutIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(HazelnutIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, -1, 40));
+
+        WChocoIced.setText("White Chocolate - Iced");
+        WChocoIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WChocoIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(WChocoIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, 40));
+
+        WChocoH.setText("White Chocolate - Hot");
+        WChocoH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WChocoHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(WChocoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 150, 40));
+
+        HazelnutH.setText("Hazelnut - Hot");
+        HazelnutH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HazelnutHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(HazelnutH, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, 40));
+
+        ButterH.setText("Butterscotch - Hot");
+        ButterH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButterHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(ButterH, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, 40));
+
+        ButterIced.setText("Butterscotch - Iced");
+        ButterIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButterIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(ButterIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, 40));
+
+        VanillaH.setText("Vanilla - Hot");
+        VanillaH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VanillaHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(VanillaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, 40));
+
+        VanillaIced.setText("Vaniila - Iced");
+        VanillaIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VanillaIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(VanillaIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, 40));
+
+        MacadamiaH.setText("Macadamia - Hot");
+        MacadamiaH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MacadamiaHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MacadamiaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, 40));
+
+        MacadamiaIced.setText("Macadamia - Iced");
+        MacadamiaIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MacadamiaIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MacadamiaIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, 40));
+
+        SCaramelH.setText("Salted Caramel - Hot");
+        SCaramelH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SCaramelHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(SCaramelH, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, -1, 40));
+
+        SCaramelIced.setText("Salted Caramel - Iced");
+        SCaramelIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SCaramelIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(SCaramelIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, 40));
+
+        CaramelH.setText("Caramel - Hot");
+        CaramelH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaramelHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CaramelH, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, -1, 40));
+
+        CaramelIced.setText("Caramel - Iced");
+        CaramelIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaramelIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CaramelIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, -1, 40));
+
+        MochaH.setText("Mocha - Hot");
+        MochaH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MochaHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MochaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 40));
+
+        MochaIced.setText("Mocha - Iced");
+        MochaIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MochaIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MochaIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, 40));
+
+        MatchaH.setText("Matcha - Hot");
+        MatchaH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MatchaHActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MatchaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 100, 40));
+
+        MatchaIced.setText("Matcha - Iced");
+        MatchaIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MatchaIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MatchaIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, 40));
+
+        SCaramelEspr.setText("Salted Caramel - Espresso");
+        SCaramelEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SCaramelEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(SCaramelEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, 40));
+
+        SCaramelCream.setText("Salted Caramel - Cream");
+        SCaramelCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SCaramelCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(SCaramelCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 170, 40));
+
+        PPLatteIced.setText("Pastry Project Latte - Iced");
+        PPLatteIced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PPLatteIcedActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(PPLatteIced, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, 40));
+
+        CaramelEspr.setText("Caramel - Espresso");
+        CaramelEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaramelEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CaramelEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, -1, 40));
+
+        CaramelCream.setText("Caramel - Cream");
+        CaramelCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaramelCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CaramelCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 130, 40));
+
+        ChocoEspr.setText("Chocolate - Espresso");
+        ChocoEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(ChocoEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, 40));
+
+        ChocoCream.setText("Chocolate - Cream");
+        ChocoCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(ChocoCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 140, 40));
+
+        MatchaEspr.setText("Matcha - Espresso");
+        MatchaEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MatchaEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MatchaEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, -1, 40));
+
+        MatchaCream.setText("Matcha - Cream");
+        MatchaCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MatchaCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(MatchaCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, 130, 40));
+
+        WChocoEspr.setText("White Chocolate - Espresso");
+        WChocoEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WChocoEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(WChocoEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, 40));
+
+        WChocoCream.setText("White Chocolate- Cream");
+        WChocoCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WChocoCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(WChocoCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 590, 180, 40));
+
+        CnCEspr.setText("Cookies & Cream - Espresso");
+        CnCEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CnCEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CnCEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, -1, 40));
+
+        CnCCream.setText("Cookies & Cream - Cream");
+        CnCCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CnCCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(CnCCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 590, 180, 40));
+
+        VanillaEspr.setText("Vanilla - Espresso");
+        VanillaEspr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VanillaEsprActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(VanillaEspr, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, -1, 40));
+
+        VanillaCream.setText("Vanilla - Cream");
+        VanillaCream.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VanillaCreamActionPerformed(evt);
+            }
+        });
+        CoffeeItems.add(VanillaCream, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 590, 130, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,15 +417,360 @@ public class CoffeeItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void LatteIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LatteIcedActionPerformed
+        double PriceofItem = 120.00;
+        String NameofItem = "Latte - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LatteIcedActionPerformed
+
+    private void AmericanoIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmericanoIcedActionPerformed
+        double PriceofItem = 110.00;
+        String NameofItem = "Americano - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_AmericanoIcedActionPerformed
+
+    private void AmericanoHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmericanoHActionPerformed
+        double PriceofItem = 110.00;
+        String NameofItem = "Americano - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_AmericanoHActionPerformed
+
+    private void LatteHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LatteHActionPerformed
+        double PriceofItem = 120.00;
+        String NameofItem = "Latte - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LatteHActionPerformed
+
+    private void CappuccinoHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CappuccinoHActionPerformed
+        double PriceofItem = 120.00;
+        String NameofItem = "Cappuccino - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CappuccinoHActionPerformed
+
+    private void CappuccinoIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CappuccinoIcedActionPerformed
+        double PriceofItem = 120.00;
+        String NameofItem = "Cappuccino - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CappuccinoIcedActionPerformed
+
+    private void HazelnutIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HazelnutIcedActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Hazelnut - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_HazelnutIcedActionPerformed
+
+    private void WChocoIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WChocoIcedActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "White Chocolate - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_WChocoIcedActionPerformed
+
+    private void WChocoHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WChocoHActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "White Chocolate - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_WChocoHActionPerformed
+
+    private void HazelnutHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HazelnutHActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Hazelnut - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_HazelnutHActionPerformed
+
+    private void ButterHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButterHActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Butterscotch - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ButterHActionPerformed
+
+    private void ButterIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButterIcedActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Butterscotch - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ButterIcedActionPerformed
+
+    private void VanillaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VanillaHActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Vanilla - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_VanillaHActionPerformed
+
+    private void VanillaIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VanillaIcedActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Vanilla - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_VanillaIcedActionPerformed
+
+    private void MacadamiaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MacadamiaHActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Macadamia - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MacadamiaHActionPerformed
+
+    private void MacadamiaIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MacadamiaIcedActionPerformed
+       double PriceofItem = 135.00;
+        String NameofItem = "Macadamia - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MacadamiaIcedActionPerformed
+
+    private void SCaramelHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCaramelHActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Salted Caramel - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_SCaramelHActionPerformed
+
+    private void SCaramelIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCaramelIcedActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Salted Caramel - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_SCaramelIcedActionPerformed
+
+    private void CaramelHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaramelHActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Caramel - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CaramelHActionPerformed
+
+    private void CaramelIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaramelIcedActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Caramel - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CaramelIcedActionPerformed
+
+    private void MochaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MochaHActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Mocha - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MochaHActionPerformed
+
+    private void MochaIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MochaIcedActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Mocha - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MochaIcedActionPerformed
+
+    private void MatchaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MatchaHActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Matcha - Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MatchaHActionPerformed
+
+    private void MatchaIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MatchaIcedActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Matcha - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MatchaIcedActionPerformed
+
+    private void SCaramelEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCaramelEsprActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Salted Caramel - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_SCaramelEsprActionPerformed
+
+    private void SCaramelCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCaramelCreamActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Salted Caramel - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_SCaramelCreamActionPerformed
+
+    private void PPLatteIcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PPLatteIcedActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Pastry Project Latte - Iced";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PPLatteIcedActionPerformed
+
+    private void CaramelEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaramelEsprActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Caramel - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CaramelEsprActionPerformed
+
+    private void CaramelCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaramelCreamActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Caramel - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CaramelCreamActionPerformed
+
+    private void ChocoEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoEsprActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Chocolate - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoEsprActionPerformed
+
+    private void ChocoCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoCreamActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Chocolate - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoCreamActionPerformed
+
+    private void MatchaEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MatchaEsprActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Matcha - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MatchaEsprActionPerformed
+
+    private void MatchaCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MatchaCreamActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Matcha - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MatchaCreamActionPerformed
+
+    private void WChocoEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WChocoEsprActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "White Chocolate - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_WChocoEsprActionPerformed
+
+    private void WChocoCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WChocoCreamActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "White Chocolate - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_WChocoCreamActionPerformed
+
+    private void CnCEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CnCEsprActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Cookies and Cream - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CnCEsprActionPerformed
+
+    private void CnCCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CnCCreamActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Cookies and Cream - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CnCCreamActionPerformed
+
+    private void VanillaEsprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VanillaEsprActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Vanilla - Espresso";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_VanillaEsprActionPerformed
+
+    private void VanillaCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VanillaCreamActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Vanilla - Cream";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_VanillaCreamActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AmericanoH;
+    private javax.swing.JButton AmericanoIced;
+    private javax.swing.JButton ButterH;
+    private javax.swing.JButton ButterIced;
+    private javax.swing.JButton CappuccinoH;
+    private javax.swing.JButton CappuccinoIced;
+    private javax.swing.JButton CaramelCream;
+    private javax.swing.JButton CaramelEspr;
+    private javax.swing.JButton CaramelH;
+    private javax.swing.JButton CaramelIced;
+    private javax.swing.JButton ChocoCream;
+    private javax.swing.JButton ChocoEspr;
+    private javax.swing.JButton CnCCream;
+    private javax.swing.JButton CnCEspr;
     private javax.swing.JPanel CoffeeItems;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JButton HazelnutH;
+    private javax.swing.JButton HazelnutIced;
+    private javax.swing.JButton LatteH;
+    private javax.swing.JButton LatteIced;
+    private javax.swing.JButton MacadamiaH;
+    private javax.swing.JButton MacadamiaIced;
+    private javax.swing.JButton MatchaCream;
+    private javax.swing.JButton MatchaEspr;
+    private javax.swing.JButton MatchaH;
+    private javax.swing.JButton MatchaIced;
+    private javax.swing.JButton MochaH;
+    private javax.swing.JButton MochaIced;
+    private javax.swing.JButton PPLatteIced;
+    private javax.swing.JButton SCaramelCream;
+    private javax.swing.JButton SCaramelEspr;
+    private javax.swing.JButton SCaramelH;
+    private javax.swing.JButton SCaramelIced;
+    private javax.swing.JButton VanillaCream;
+    private javax.swing.JButton VanillaEspr;
+    private javax.swing.JButton VanillaH;
+    private javax.swing.JButton VanillaIced;
+    private javax.swing.JButton WChocoCream;
+    private javax.swing.JButton WChocoEspr;
+    private javax.swing.JButton WChocoH;
+    private javax.swing.JButton WChocoIced;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     // End of variables declaration//GEN-END:variables

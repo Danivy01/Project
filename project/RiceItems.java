@@ -32,112 +32,346 @@ public class RiceItems extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         RiceItems = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        RiceDrinks = new javax.swing.JComboBox<>();
+        Tempura = new javax.swing.JButton();
+        FishFillet = new javax.swing.JButton();
+        Honey = new javax.swing.JButton();
+        PlainRice = new javax.swing.JButton();
+        ChickenFillet = new javax.swing.JButton();
+        BeefBroccoli = new javax.swing.JButton();
+        Lumpia = new javax.swing.JButton();
+        ChickenTeriyaki = new javax.swing.JButton();
+        PorkBbq = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        RiceDrinks1 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        FilletwithB = new javax.swing.JButton();
+        BeefwithB = new javax.swing.JButton();
+        LumpiawithB = new javax.swing.JButton();
+        TempurawithB = new javax.swing.JButton();
+        FishwithB = new javax.swing.JButton();
+        HoneywithB = new javax.swing.JButton();
+        TeriyakiwithB = new javax.swing.JButton();
+        PorkBbqwithB = new javax.swing.JButton();
+        LemonIcedTea = new javax.swing.JButton();
+        Cucumber = new javax.swing.JButton();
+        BlueLemonade = new javax.swing.JButton();
+        ComboMeal = new javax.swing.JButton();
+        Lychee = new javax.swing.JButton();
+        CMChickenFillet = new javax.swing.JButton();
+        CMTempura = new javax.swing.JButton();
+        CMChickenTeriyaki = new javax.swing.JButton();
+        CMFishFillet = new javax.swing.JButton();
+        CMBeefBroccoli = new javax.swing.JButton();
+        CMHoney = new javax.swing.JButton();
+        CMPork = new javax.swing.JButton();
+        CMLumpia = new javax.swing.JButton();
+        CMSmores = new javax.swing.JButton();
+        CMGanache = new javax.swing.JButton();
+        CMChocoCaramel = new javax.swing.JButton();
+        CMOreo = new javax.swing.JButton();
+        CMCarrot = new javax.swing.JButton();
+        CMRedVelvet = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         RiceItems.setBackground(new java.awt.Color(255, 204, 153));
         RiceItems.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Tempura");
-        RiceItems.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, 160, 40));
-
-        jButton10.setText("Fish Fillet");
-        RiceItems.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 160, 40));
-
-        jButton12.setText("Honey Garlic Chicken");
-        RiceItems.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 560, 160, 40));
-
-        jButton24.setText("Plain Rice");
-        RiceItems.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 660, 160, 40));
-
-        jLabel12.setBackground(new java.awt.Color(204, 102, 0));
-        jLabel12.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jLabel12.setText("Combo Meal");
-        RiceItems.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, 50));
-
-        jButton27.setText("Chicken Fillet");
-        RiceItems.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 160, 40));
-
-        jButton28.setText("Beef Broccoli");
-        RiceItems.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 500, 160, 40));
-
-        jButton29.setText("Lumpiang Shanghai");
-        RiceItems.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, 160, 40));
-
-        jButton34.setText("Chicken Teriyaki");
-        RiceItems.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 610, 160, 40));
-
-        jButton35.setText("Pork Barbeque");
-        RiceItems.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, 160, 40));
-
-        RiceDrinks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chicken Fillet", "Beef Broccoli", "Lumpiang Shanghai", "Tempura", "Fish Fillet", "Honey Garlic Chicken", "Chicken Teriyaki", "Pork Barbeque" }));
-        RiceDrinks.addActionListener(new java.awt.event.ActionListener() {
+        Tempura.setText("Tempura");
+        Tempura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RiceDrinksActionPerformed(evt);
+                TempuraActionPerformed(evt);
             }
         });
-        RiceItems.add(RiceDrinks, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 200, 40));
+        RiceItems.add(Tempura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 160, 40));
+
+        FishFillet.setText("Fish Fillet");
+        FishFillet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FishFilletActionPerformed(evt);
+            }
+        });
+        RiceItems.add(FishFillet, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, 160, 40));
+
+        Honey.setText("Honey Garlic Chicken");
+        Honey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HoneyActionPerformed(evt);
+            }
+        });
+        RiceItems.add(Honey, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 640, 160, 40));
+
+        PlainRice.setText("Plain Rice");
+        PlainRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlainRiceActionPerformed(evt);
+            }
+        });
+        RiceItems.add(PlainRice, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 690, 160, 40));
+
+        ChickenFillet.setText("Chicken Fillet");
+        ChickenFillet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenFilletActionPerformed(evt);
+            }
+        });
+        RiceItems.add(ChickenFillet, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 160, 40));
+
+        BeefBroccoli.setText("Beef Broccoli");
+        BeefBroccoli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BeefBroccoliActionPerformed(evt);
+            }
+        });
+        RiceItems.add(BeefBroccoli, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, 160, 40));
+
+        Lumpia.setText("Lumpiang Shanghai");
+        Lumpia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LumpiaActionPerformed(evt);
+            }
+        });
+        RiceItems.add(Lumpia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 590, 160, 40));
+
+        ChickenTeriyaki.setText("Chicken Teriyaki");
+        ChickenTeriyaki.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenTeriyakiActionPerformed(evt);
+            }
+        });
+        RiceItems.add(ChickenTeriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 160, 40));
+
+        PorkBbq.setText("Pork Barbeque");
+        PorkBbq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PorkBbqActionPerformed(evt);
+            }
+        });
+        RiceItems.add(PorkBbq, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 690, 160, 40));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel1.setText("A la Carte");
-        RiceItems.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
+        RiceItems.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, -1, -1));
 
         jLabel13.setBackground(new java.awt.Color(204, 102, 0));
         jLabel13.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel13.setText("Rice Meals with Beverage");
-        RiceItems.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, 50));
+        RiceItems.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, 50));
 
-        jButton1.setText("Add");
-        RiceItems.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
-
-        RiceDrinks1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chicken Fillet", "Beef Broccoli", "Lumpiang Shanghai", "Tempura", "Fish Fillet", "Honey Garlic Chicken", "Chicken Teriyaki", "Pork Barbeque" }));
-        RiceDrinks1.addActionListener(new java.awt.event.ActionListener() {
+        FilletwithB.setText("Chicken Fillet");
+        FilletwithB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RiceDrinks1ActionPerformed(evt);
+                FilletwithBActionPerformed(evt);
             }
         });
-        RiceItems.add(RiceDrinks1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 230, 40));
+        RiceItems.add(FilletwithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 160, 40));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chocolate Ganache Cake", "Chocolate Smores Cake", "Chocolate Caramel Cake", "Chocolate Oreo Cake", "Carrot Cake", "Red Velvet Cake" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        BeefwithB.setText("Beef Broccoli");
+        BeefwithB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                BeefwithBActionPerformed(evt);
             }
         });
-        RiceItems.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 200, 40));
+        RiceItems.add(BeefwithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 160, 40));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lemon Iced Tea", "Cucumber", "Blue Lemonade", "Lychee" }));
-        RiceItems.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 230, 40));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lemon Iced Tea", "Cucumber", "Blue Lemonade", "Lychee" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        LumpiawithB.setText("Lumpiang Shanghai");
+        LumpiawithB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                LumpiawithBActionPerformed(evt);
             }
         });
-        RiceItems.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 200, 40));
+        RiceItems.add(LumpiawithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 160, 40));
 
-        jButton2.setText("Add");
-        RiceItems.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, -1));
+        TempurawithB.setText("Tempura");
+        TempurawithB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TempurawithBActionPerformed(evt);
+            }
+        });
+        RiceItems.add(TempurawithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 160, 40));
+
+        FishwithB.setText("Fish Fillet");
+        FishwithB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FishwithBActionPerformed(evt);
+            }
+        });
+        RiceItems.add(FishwithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 160, 40));
+
+        HoneywithB.setText("Honey Garlic Chicken");
+        HoneywithB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HoneywithBActionPerformed(evt);
+            }
+        });
+        RiceItems.add(HoneywithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 160, 40));
+
+        TeriyakiwithB.setText("Chicken Teriyaki");
+        TeriyakiwithB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TeriyakiwithBActionPerformed(evt);
+            }
+        });
+        RiceItems.add(TeriyakiwithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 160, 40));
+
+        PorkBbqwithB.setText("Pork Barbeque");
+        PorkBbqwithB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PorkBbqwithBActionPerformed(evt);
+            }
+        });
+        RiceItems.add(PorkBbqwithB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 160, 40));
+
+        LemonIcedTea.setText("Lemon Iced Tea");
+        LemonIcedTea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LemonIcedTeaActionPerformed(evt);
+            }
+        });
+        RiceItems.add(LemonIcedTea, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 60, 160, 40));
+
+        Cucumber.setText("Cucumber");
+        Cucumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CucumberActionPerformed(evt);
+            }
+        });
+        RiceItems.add(Cucumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 160, 40));
+
+        BlueLemonade.setText("Blue Lemonade");
+        BlueLemonade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueLemonadeActionPerformed(evt);
+            }
+        });
+        RiceItems.add(BlueLemonade, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 160, 40));
+
+        ComboMeal.setText("Combo  Meal");
+        ComboMeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboMealActionPerformed(evt);
+            }
+        });
+        RiceItems.add(ComboMeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 160, 40));
+
+        Lychee.setText("Lychee");
+        Lychee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LycheeActionPerformed(evt);
+            }
+        });
+        RiceItems.add(Lychee, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 160, 40));
+
+        CMChickenFillet.setText("Chicken Fillet");
+        CMChickenFillet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMChickenFilletActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMChickenFillet, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 160, 40));
+
+        CMTempura.setText("Tempura");
+        CMTempura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMTempuraActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMTempura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 160, 40));
+
+        CMChickenTeriyaki.setText("Chicken Teriyaki");
+        CMChickenTeriyaki.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMChickenTeriyakiActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMChickenTeriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 160, 40));
+
+        CMFishFillet.setText("Fish Fillet");
+        CMFishFillet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMFishFilletActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMFishFillet, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, 160, 40));
+
+        CMBeefBroccoli.setText("Beef Broccoli");
+        CMBeefBroccoli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMBeefBroccoliActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMBeefBroccoli, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 160, 40));
+
+        CMHoney.setText("Honey Garlic Chicken");
+        CMHoney.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMHoneyActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMHoney, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 160, 40));
+
+        CMPork.setText("Pork Barbeque");
+        CMPork.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMPorkActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMPork, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 160, 40));
+
+        CMLumpia.setText("Lumpiang Shanghai");
+        CMLumpia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMLumpiaActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMLumpia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 160, 40));
+
+        CMSmores.setText("Chocolate Smores Cake");
+        CMSmores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMSmoresActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMSmores, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 160, 30));
+
+        CMGanache.setText("Chocolate Ganache Cake");
+        CMGanache.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMGanacheActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMGanache, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, -1, 30));
+
+        CMChocoCaramel.setText("Chocolate Caramel Cake");
+        CMChocoCaramel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMChocoCaramelActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMChocoCaramel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, -1, 30));
+
+        CMOreo.setText("Chocolate Oreo Cake");
+        CMOreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMOreoActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMOreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 150, 30));
+
+        CMCarrot.setText("Carrot Cake");
+        CMCarrot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMCarrotActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMCarrot, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 110, 30));
+
+        CMRedVelvet.setText("Red Velvet Cake");
+        CMRedVelvet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMRedVelvetActionPerformed(evt);
+            }
+        });
+        RiceItems.add(CMRedVelvet, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,43 +389,334 @@ public class RiceItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RiceDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RiceDrinksActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RiceDrinksActionPerformed
+    private void PlainRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlainRiceActionPerformed
+        double PriceofItem = 20.00;
+        String NameofItem = "Plain Rice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PlainRiceActionPerformed
 
-    private void RiceDrinks1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RiceDrinks1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RiceDrinks1ActionPerformed
+    private void ChickenTeriyakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenTeriyakiActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Chicken Teriyaki";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChickenTeriyakiActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void FilletwithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FilletwithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Chicken Fillet w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_FilletwithBActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    private void TempurawithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TempurawithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Tempura w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TempurawithBActionPerformed
+
+    private void TeriyakiwithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TeriyakiwithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Chicken Teriyaki w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TeriyakiwithBActionPerformed
+
+    private void FishwithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FishwithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Fish Fillet w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_FishwithBActionPerformed
+
+    private void BeefwithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefwithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Beef Broccoli w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BeefwithBActionPerformed
+
+    private void HoneywithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HoneywithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Honey Garlic Chicken w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_HoneywithBActionPerformed
+
+    private void PorkBbqwithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PorkBbqwithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Pork Barbeque w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PorkBbqwithBActionPerformed
+
+    private void LumpiawithBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LumpiawithBActionPerformed
+        double PriceofItem = 155.00;
+        String NameofItem = "Lumpiang Shanghai w/ Beverage";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LumpiawithBActionPerformed
+
+    private void ComboMealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboMealActionPerformed
+        double PriceofItem = 235.00;
+        String NameofItem = "Combo Meal";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ComboMealActionPerformed
+
+    private void ChickenFilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenFilletActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Chicken Fillet";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChickenFilletActionPerformed
+
+    private void TempuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TempuraActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Tempura";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TempuraActionPerformed
+
+    private void BeefBroccoliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefBroccoliActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Beef Broccoli";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BeefBroccoliActionPerformed
+
+    private void FishFilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FishFilletActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Fish Fillet";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_FishFilletActionPerformed
+
+    private void PorkBbqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PorkBbqActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Pork Barbeque";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PorkBbqActionPerformed
+
+    private void LumpiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LumpiaActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Lumpiang Shanghai";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LumpiaActionPerformed
+
+    private void HoneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HoneyActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Honey Garlic Chicken";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_HoneyActionPerformed
+
+    private void CMChickenFilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMChickenFilletActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chicken Fillet";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMChickenFilletActionPerformed
+
+    private void CMTempuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMTempuraActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Tempura";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMTempuraActionPerformed
+
+    private void CMChickenTeriyakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMChickenTeriyakiActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chicken Teriyaki";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMChickenTeriyakiActionPerformed
+
+    private void CMFishFilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMFishFilletActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Fish Fillet";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMFishFilletActionPerformed
+
+    private void CMBeefBroccoliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMBeefBroccoliActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Beef Broccoli";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMBeefBroccoliActionPerformed
+
+    private void CMHoneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMHoneyActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Honey Garlic Chicken";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMHoneyActionPerformed
+
+    private void CMPorkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMPorkActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Pork Barbeque";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMPorkActionPerformed
+
+    private void CMLumpiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMLumpiaActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Lumpiang Shanghai";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMLumpiaActionPerformed
+
+    private void CMGanacheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMGanacheActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chocolate Ganache Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMGanacheActionPerformed
+
+    private void CMSmoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMSmoresActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chocolate Smores Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMSmoresActionPerformed
+
+    private void CMOreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMOreoActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chocolate Oreo Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMOreoActionPerformed
+
+    private void CMRedVelvetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMRedVelvetActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Red Velvet Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMRedVelvetActionPerformed
+
+    private void CMChocoCaramelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMChocoCaramelActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Chocolate Caramel Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMChocoCaramelActionPerformed
+
+    private void CMCarrotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMCarrotActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "CM Carrot Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CMCarrotActionPerformed
+
+    private void LemonIcedTeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LemonIcedTeaActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "Lemon Iced Tea";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LemonIcedTeaActionPerformed
+
+    private void CucumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CucumberActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "Cucumber";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CucumberActionPerformed
+
+    private void BlueLemonadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueLemonadeActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "Blue Lemonade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueLemonadeActionPerformed
+
+    private void LycheeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LycheeActionPerformed
+        double PriceofItem = 0.00;
+        String NameofItem = "Lychee";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_LycheeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> RiceDrinks;
-    private javax.swing.JComboBox<String> RiceDrinks1;
+    private javax.swing.JButton BeefBroccoli;
+    private javax.swing.JButton BeefwithB;
+    private javax.swing.JButton BlueLemonade;
+    private javax.swing.JButton CMBeefBroccoli;
+    private javax.swing.JButton CMCarrot;
+    private javax.swing.JButton CMChickenFillet;
+    private javax.swing.JButton CMChickenTeriyaki;
+    private javax.swing.JButton CMChocoCaramel;
+    private javax.swing.JButton CMFishFillet;
+    private javax.swing.JButton CMGanache;
+    private javax.swing.JButton CMHoney;
+    private javax.swing.JButton CMLumpia;
+    private javax.swing.JButton CMOreo;
+    private javax.swing.JButton CMPork;
+    private javax.swing.JButton CMRedVelvet;
+    private javax.swing.JButton CMSmores;
+    private javax.swing.JButton CMTempura;
+    private javax.swing.JButton ChickenFillet;
+    private javax.swing.JButton ChickenTeriyaki;
+    private javax.swing.JButton ComboMeal;
+    private javax.swing.JButton Cucumber;
+    private javax.swing.JButton FilletwithB;
+    private javax.swing.JButton FishFillet;
+    private javax.swing.JButton FishwithB;
+    private javax.swing.JButton Honey;
+    private javax.swing.JButton HoneywithB;
+    private javax.swing.JButton LemonIcedTea;
+    private javax.swing.JButton Lumpia;
+    private javax.swing.JButton LumpiawithB;
+    private javax.swing.JButton Lychee;
+    private javax.swing.JButton PlainRice;
+    private javax.swing.JButton PorkBbq;
+    private javax.swing.JButton PorkBbqwithB;
     private javax.swing.JPanel RiceItems;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JButton Tempura;
+    private javax.swing.JButton TempurawithB;
+    private javax.swing.JButton TeriyakiwithB;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     // End of variables declaration//GEN-END:variables
 }

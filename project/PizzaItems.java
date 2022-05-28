@@ -32,31 +32,56 @@ public class PizzaItems extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         PizzaItems = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
+        Breakfast = new javax.swing.JButton();
+        Hawaiian = new javax.swing.JButton();
+        Pepperoni = new javax.swing.JButton();
+        Veggie = new javax.swing.JButton();
+        Cheese = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         PizzaItems.setBackground(new java.awt.Color(255, 204, 153));
         PizzaItems.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Breakfast Pizza");
-        PizzaItems.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 160, 40));
+        Breakfast.setText("Breakfast Pizza");
+        Breakfast.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BreakfastActionPerformed(evt);
+            }
+        });
+        PizzaItems.add(Breakfast, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 160, 40));
 
-        jButton10.setText("Hawaiian Pizza");
-        PizzaItems.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 160, 40));
+        Hawaiian.setText("Hawaiian Pizza");
+        Hawaiian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HawaiianActionPerformed(evt);
+            }
+        });
+        PizzaItems.add(Hawaiian, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 160, 40));
 
-        jButton27.setText("Pepperoni Pizza");
-        PizzaItems.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
+        Pepperoni.setText("Pepperoni Pizza");
+        Pepperoni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PepperoniActionPerformed(evt);
+            }
+        });
+        PizzaItems.add(Pepperoni, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
 
-        jButton28.setText("Veggie Pizza");
-        PizzaItems.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
+        Veggie.setText("Veggie Pizza");
+        Veggie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VeggieActionPerformed(evt);
+            }
+        });
+        PizzaItems.add(Veggie, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
 
-        jButton29.setText("Cheese Pizza");
-        PizzaItems.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
+        Cheese.setText("Cheese Pizza");
+        Cheese.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheeseActionPerformed(evt);
+            }
+        });
+        PizzaItems.add(Cheese, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,13 +99,53 @@ public class PizzaItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void PepperoniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PepperoniActionPerformed
+        double PriceofItem = 400.00;
+        String NameofItem = "Pepperoni Pizza";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PepperoniActionPerformed
+
+    private void VeggieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VeggieActionPerformed
+        double PriceofItem = 390.00;
+        String NameofItem = "Veggie Pizza";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_VeggieActionPerformed
+
+    private void CheeseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheeseActionPerformed
+        double PriceofItem = 390.00;
+        String NameofItem = "Cheese Pizza";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CheeseActionPerformed
+
+    private void BreakfastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreakfastActionPerformed
+        double PriceofItem = 410.00;
+        String NameofItem = "Breakfast Pizza";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BreakfastActionPerformed
+
+    private void HawaiianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HawaiianActionPerformed
+        double PriceofItem = 400.00;
+        String NameofItem = "Hawaiian Pizza";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_HawaiianActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Breakfast;
+    private javax.swing.JButton Cheese;
+    private javax.swing.JButton Hawaiian;
+    private javax.swing.JButton Pepperoni;
     private javax.swing.JPanel PizzaItems;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton Veggie;
     // End of variables declaration//GEN-END:variables
 }

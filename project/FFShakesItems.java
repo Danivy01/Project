@@ -32,31 +32,56 @@ public class FFShakesItems extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         FFShakesItems = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
+        Watermelon = new javax.swing.JButton();
+        GreenMango = new javax.swing.JButton();
+        Strawberry = new javax.swing.JButton();
+        Blueberry = new javax.swing.JButton();
+        Mango = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         FFShakesItems.setBackground(new java.awt.Color(255, 204, 153));
         FFShakesItems.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Watermelon Shake");
-        FFShakesItems.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 160, 40));
+        Watermelon.setText("Watermelon Shake");
+        Watermelon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WatermelonActionPerformed(evt);
+            }
+        });
+        FFShakesItems.add(Watermelon, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 160, 40));
 
-        jButton10.setText("Green Mango Shake");
-        FFShakesItems.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 160, 40));
+        GreenMango.setText("Green Mango Shake");
+        GreenMango.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GreenMangoActionPerformed(evt);
+            }
+        });
+        FFShakesItems.add(GreenMango, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 160, 40));
 
-        jButton27.setText("Strawberry Shake");
-        FFShakesItems.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
+        Strawberry.setText("Strawberry Shake");
+        Strawberry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawberryActionPerformed(evt);
+            }
+        });
+        FFShakesItems.add(Strawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
 
-        jButton28.setText("Blueberry Shake");
-        FFShakesItems.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
+        Blueberry.setText("Blueberry Shake");
+        Blueberry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueberryActionPerformed(evt);
+            }
+        });
+        FFShakesItems.add(Blueberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
 
-        jButton29.setText("Mango Shake");
-        FFShakesItems.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
+        Mango.setText("Mango Shake");
+        Mango.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MangoActionPerformed(evt);
+            }
+        });
+        FFShakesItems.add(Mango, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,13 +99,53 @@ public class FFShakesItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void StrawberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberryActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Strawberry Shake";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawberryActionPerformed
+
+    private void BlueberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueberryActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Blueberry Shake";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueberryActionPerformed
+
+    private void MangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MangoActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Mango Shake";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MangoActionPerformed
+
+    private void WatermelonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WatermelonActionPerformed
+        double PriceofItem = 135.00;
+        String NameofItem = "Watermelon Shake";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_WatermelonActionPerformed
+
+    private void GreenMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreenMangoActionPerformed
+        double PriceofItem = 130.00;
+        String NameofItem = "Green Mango Shake";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_GreenMangoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Blueberry;
     private javax.swing.JPanel FFShakesItems;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton GreenMango;
+    private javax.swing.JButton Mango;
+    private javax.swing.JButton Strawberry;
+    private javax.swing.JButton Watermelon;
     // End of variables declaration//GEN-END:variables
 }

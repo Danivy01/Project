@@ -32,49 +32,74 @@ public class OthersItems extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         OthersItems = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        MojosOrig = new javax.swing.JButton();
+        PotatoBalls = new javax.swing.JButton();
+        ChickenNuggets = new javax.swing.JButton();
+        FrenchFries = new javax.swing.JButton();
+        SavoryFries = new javax.swing.JButton();
+        MozarellaSticks = new javax.swing.JButton();
+        MojosHot = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         OthersItems.setBackground(new java.awt.Color(255, 204, 153));
         OthersItems.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Mojos Original");
-        OthersItems.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 160, 40));
-
-        jButton10.setText("Potato Balls");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        MojosOrig.setText("Mojos Original");
+        MojosOrig.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                MojosOrigActionPerformed(evt);
             }
         });
-        OthersItems.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 160, 40));
+        OthersItems.add(MojosOrig, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 160, 40));
 
-        jButton27.setText("Chicken Nuggets");
-        OthersItems.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
-
-        jButton28.setText("French Fries");
-        OthersItems.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
-
-        jButton29.setText("Savory Fries");
-        OthersItems.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
-
-        jButton11.setText("Mozarella Sticks");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        PotatoBalls.setText("Potato Balls");
+        PotatoBalls.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                PotatoBallsActionPerformed(evt);
             }
         });
-        OthersItems.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 160, 40));
+        OthersItems.add(PotatoBalls, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 160, 40));
 
-        jButton8.setText("Mojos Hot");
-        OthersItems.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 160, 40));
+        ChickenNuggets.setText("Chicken Nuggets");
+        ChickenNuggets.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenNuggetsActionPerformed(evt);
+            }
+        });
+        OthersItems.add(ChickenNuggets, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
+
+        FrenchFries.setText("French Fries");
+        FrenchFries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FrenchFriesActionPerformed(evt);
+            }
+        });
+        OthersItems.add(FrenchFries, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 160, 40));
+
+        SavoryFries.setText("Savory Fries");
+        SavoryFries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SavoryFriesActionPerformed(evt);
+            }
+        });
+        OthersItems.add(SavoryFries, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 40));
+
+        MozarellaSticks.setText("Mozarella Sticks");
+        MozarellaSticks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MozarellaSticksActionPerformed(evt);
+            }
+        });
+        OthersItems.add(MozarellaSticks, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 160, 40));
+
+        MojosHot.setText("Mojos Hot");
+        MojosHot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MojosHotActionPerformed(evt);
+            }
+        });
+        OthersItems.add(MojosHot, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 160, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,23 +117,71 @@ public class OthersItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void PotatoBallsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PotatoBallsActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Potato Balls";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PotatoBallsActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void MozarellaSticksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MozarellaSticksActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Mozarella Sticks";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MozarellaSticksActionPerformed
+
+    private void ChickenNuggetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenNuggetsActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Chicken Nuggets";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChickenNuggetsActionPerformed
+
+    private void FrenchFriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrenchFriesActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "French Fries";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_FrenchFriesActionPerformed
+
+    private void SavoryFriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SavoryFriesActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Savory Fries";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_SavoryFriesActionPerformed
+
+    private void MojosHotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MojosHotActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Mojos Hot";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MojosHotActionPerformed
+
+    private void MojosOrigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MojosOrigActionPerformed
+        double PriceofItem = 60.00;
+        String NameofItem = "Mojos Original";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MojosOrigActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ChickenNuggets;
+    private javax.swing.JButton FrenchFries;
+    private javax.swing.JButton MojosHot;
+    private javax.swing.JButton MojosOrig;
+    private javax.swing.JButton MozarellaSticks;
     private javax.swing.JPanel OthersItems;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton PotatoBalls;
+    private javax.swing.JButton SavoryFries;
     // End of variables declaration//GEN-END:variables
 }

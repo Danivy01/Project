@@ -33,17 +33,17 @@ public class NonCoffeeItems extends javax.swing.JInternalFrame {
 
         NonCoffeeItems = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        Raspberry = new javax.swing.JButton();
+        BlueAde = new javax.swing.JButton();
+        RasAde = new javax.swing.JButton();
+        Plain = new javax.swing.JButton();
+        MangoAde = new javax.swing.JButton();
+        StrawAde = new javax.swing.JButton();
+        GreenAde = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
+        Strawberry = new javax.swing.JButton();
+        Mango = new javax.swing.JButton();
+        Blueberry = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -55,55 +55,90 @@ public class NonCoffeeItems extends javax.swing.JInternalFrame {
         jLabel11.setText("Fruit Ades");
         NonCoffeeItems.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, -1, -1));
 
-        jButton7.setText("Raspberry Yogurt Smoothie");
-        NonCoffeeItems.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 180, 40));
-
-        jButton8.setText("Blueberry Ade");
-        NonCoffeeItems.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 180, 40));
-
-        jButton9.setText("Raspberry Ade");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Raspberry.setText("Raspberry Yogurt Smoothie");
+        Raspberry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                RaspberryActionPerformed(evt);
             }
         });
-        NonCoffeeItems.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 180, 40));
+        NonCoffeeItems.add(Raspberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 180, 40));
 
-        jButton10.setText("Plain Yogurt Smoothie");
-        NonCoffeeItems.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 180, 40));
-
-        jButton11.setText("Mango Ade");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        BlueAde.setText("Blueberry Ade");
+        BlueAde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                BlueAdeActionPerformed(evt);
             }
         });
-        NonCoffeeItems.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 180, 40));
+        NonCoffeeItems.add(BlueAde, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 180, 40));
 
-        jButton13.setText("Strawberry Ade");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        RasAde.setText("Raspberry Ade");
+        RasAde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                RasAdeActionPerformed(evt);
             }
         });
-        NonCoffeeItems.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 560, 180, 40));
+        NonCoffeeItems.add(RasAde, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 180, 40));
 
-        jButton15.setText("Green Apple Ade");
-        NonCoffeeItems.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 180, 40));
+        Plain.setText("Plain Yogurt Smoothie");
+        Plain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlainActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(Plain, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 180, 40));
+
+        MangoAde.setText("Mango Ade");
+        MangoAde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MangoAdeActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(MangoAde, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 180, 40));
+
+        StrawAde.setText("Strawberry Ade");
+        StrawAde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawAdeActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(StrawAde, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 560, 180, 40));
+
+        GreenAde.setText("Green Apple Ade");
+        GreenAde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GreenAdeActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(GreenAde, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 180, 40));
 
         jLabel12.setBackground(new java.awt.Color(204, 102, 0));
         jLabel12.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel12.setText("Yogurt Smoothies");
         NonCoffeeItems.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
 
-        jButton27.setText("Strawberry Yogurt Smoothie");
-        NonCoffeeItems.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 180, 40));
+        Strawberry.setText("Strawberry Yogurt Smoothie");
+        Strawberry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawberryActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(Strawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 180, 40));
 
-        jButton28.setText("Mango Yogurt Smoothie");
-        NonCoffeeItems.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 180, 40));
+        Mango.setText("Mango Yogurt Smoothie");
+        Mango.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MangoActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(Mango, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 180, 40));
 
-        jButton29.setText("Blueberry Yogurt Smoothie");
-        NonCoffeeItems.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 180, 40));
+        Blueberry.setText("Blueberry Yogurt Smoothie");
+        Blueberry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueberryActionPerformed(evt);
+            }
+        });
+        NonCoffeeItems.add(Blueberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 180, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,31 +156,99 @@ public class NonCoffeeItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void RasAdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RasAdeActionPerformed
+        double PriceofItem = 100.00;
+        String NameofItem = "Raspberry Ade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_RasAdeActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void MangoAdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MangoAdeActionPerformed
+        double PriceofItem = 100.00;
+        String NameofItem = "Mango Ade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MangoAdeActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    private void StrawAdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawAdeActionPerformed
+        double PriceofItem = 100.00;
+        String NameofItem = "Strawberry Ade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawAdeActionPerformed
+
+    private void StrawberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberryActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Strawberry Yogurt Smoothie";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawberryActionPerformed
+
+    private void MangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MangoActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Mango Yogurt Smoothie";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MangoActionPerformed
+
+    private void BlueberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueberryActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Blueberry Yogurt Smoothie";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueberryActionPerformed
+
+    private void RaspberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaspberryActionPerformed
+        double PriceofItem = 140.00;
+        String NameofItem = "Raspberry Yogurt Smoothie";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_RaspberryActionPerformed
+
+    private void PlainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlainActionPerformed
+        double PriceofItem = 120.00;
+        String NameofItem = "Plain Yogurt Smoothie";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_PlainActionPerformed
+
+    private void BlueAdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueAdeActionPerformed
+        double PriceofItem = 100.00;
+        String NameofItem = "Blueberry Ade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueAdeActionPerformed
+
+    private void GreenAdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreenAdeActionPerformed
+        double PriceofItem = 100.00;
+        String NameofItem = "Green Mango Ade";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_GreenAdeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BlueAde;
+    private javax.swing.JButton Blueberry;
+    private javax.swing.JButton GreenAde;
+    private javax.swing.JButton Mango;
+    private javax.swing.JButton MangoAde;
     private javax.swing.JPanel NonCoffeeItems;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton Plain;
+    private javax.swing.JButton RasAde;
+    private javax.swing.JButton Raspberry;
+    private javax.swing.JButton StrawAde;
+    private javax.swing.JButton Strawberry;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     // End of variables declaration//GEN-END:variables

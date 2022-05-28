@@ -4,8 +4,23 @@
  */
 package pastry.project;
 
-import javax.swing.DefaultListModel;
-
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.awt.Color;
+import java.io.FileOutputStream;
+import javax.swing.table.DefaultTableModel;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -17,13 +32,29 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    Color DefaultColor,ClickedColor;
+    
     public Menu() {
         initComponents();
+        DefaultColor = new Color (204,102,0);
+        ClickedColor = new Color (255,204,153);
         
-
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+        
+        Connect();
+        OrderNum();
     }
     
-    
+    Connection con;
+    PreparedStatement pst;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,49 +68,29 @@ public class Menu extends javax.swing.JFrame {
         container = new javax.swing.JPanel();
         left = new javax.swing.JPanel();
         items = new javax.swing.JPanel();
+        Rice = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        Cakes = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Pizza = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        Pasta = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        Drinks = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        Others = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        Yogurt = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel21 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
-        jScrollPane18 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
-        jScrollPane19 = new javax.swing.JScrollPane();
-        jTable7 = new javax.swing.JTable();
-        jScrollPane20 = new javax.swing.JScrollPane();
-        jTable8 = new javax.swing.JTable();
-        jScrollPane21 = new javax.swing.JScrollPane();
-        jTable9 = new javax.swing.JTable();
-        jScrollPane22 = new javax.swing.JScrollPane();
-        jTable10 = new javax.swing.JTable();
-        jScrollPane23 = new javax.swing.JScrollPane();
-        jTable11 = new javax.swing.JTable();
-        jScrollPane24 = new javax.swing.JScrollPane();
-        jTable12 = new javax.swing.JTable();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        DrinksList = new javax.swing.JList<>();
+        FFS = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        Coffee = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         right = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -87,23 +98,28 @@ public class Menu extends javax.swing.JFrame {
         Quantity = new javax.swing.JSpinner();
         jLabel16 = new javax.swing.JLabel();
         Subtotal = new javax.swing.JTextField();
-        Add2Cart = new javax.swing.JButton();
+        Clear = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Cart = new javax.swing.JTable();
-        jLabel17 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        OrderNumber = new javax.swing.JLabel();
+        Print = new javax.swing.JButton();
+        Remove = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         Add2Cart1 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         Price = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        PayAmount = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        Total = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        Change = new javax.swing.JTextField();
+        Pay = new javax.swing.JButton();
+        TakeOut = new javax.swing.JButton();
+        DineIN = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        Service = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -117,226 +133,184 @@ public class Menu extends javax.swing.JFrame {
         items.setBackground(new java.awt.Color(204, 102, 0));
         items.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel18.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel18.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel18.setText("Others");
-        items.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 20, 60, 20));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "With Beverage", "A la Carte", "Combo Meal", " ", " ", " " }));
-        items.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 170, -1));
-
-        jLabel19.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel19.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel19.setText("Cakes and Cheesecakes");
-        items.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 40));
-
-        jLabel20.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel20.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel20.setText("Rice Meals");
-        items.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 100, 40));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yogurt Smoothies", "Fruit Ades", " ", " ", " " }));
-        items.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 180, -1));
-
-        jLabel21.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel21.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel21.setText("With Beverage");
-        items.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 90, 20));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "With Beverage", "A la Carte", "Combo Meal", " ", " ", " " }));
-        items.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 300, 170, -1));
-
-        jLabel22.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel22.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel22.setText("Pasta");
-        items.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 260, 60, 20));
-
-        jLabel23.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel23.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel23.setText("Pizza");
-        items.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, 60, 20));
-
-        jLabel25.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel25.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel25.setText("Combo Meal Choices");
-        items.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 130, 20));
-
-        jLabel26.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel26.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel26.setText("With Slice of Cake");
-        items.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 130, 20));
-
-        jLabel27.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel27.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel27.setText("NonCoffee Items");
-        items.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 130, 20));
-
-        jLabel28.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel28.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel28.setText("Coffee Items");
-        items.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 130, 20));
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Espresso - Hot", "Espresso - Cold", "Frappuccino - Cream", "Frappuccino - Espresso", " ", " ", " " }));
-        items.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 180, -1));
-
-        jLabel24.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel24.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel24.setText("Drinks");
-        items.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, 60, 20));
-
-        jLabel29.setBackground(new java.awt.Color(102, 51, 0));
-        jLabel29.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel29.setText("Fresh Fruit Shakes");
-        items.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, 140, 20));
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane14.setViewportView(jTable2);
-
-        items.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 560, 190, 150));
-
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane16.setViewportView(jTable4);
-
-        items.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 180, 150));
-
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane17.setViewportView(jTable5);
-
-        items.add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 180, 150));
-
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane18.setViewportView(jTable6);
-
-        items.add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, 180, 190));
-
-        jTable7.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane19.setViewportView(jTable7);
-
-        items.add(jScrollPane19, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 180, 190));
-
-        jTable8.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane20.setViewportView(jTable8);
-
-        items.add(jScrollPane20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 170, 150));
-
-        jTable9.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane21.setViewportView(jTable9);
-
-        items.add(jScrollPane21, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 180, 150));
-
-        jTable10.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane22.setViewportView(jTable10);
-
-        items.add(jScrollPane22, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 180, 150));
-
-        jTable11.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane23.setViewportView(jTable11);
-
-        items.add(jScrollPane23, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 170, 150));
-
-        jTable12.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item"
-            }
-        ));
-        jScrollPane24.setViewportView(jTable12);
-
-        items.add(jScrollPane24, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 170, 150));
-
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton1.setText("Slice");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-        items.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
-
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton2.setText("Whole");
-        items.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
-
-        DrinksList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Lemon Iced Tea", "Cucumber", "Blue Lemonade", "Lychee", "Sola", "Root Beer", "Canada Dry", "Fresh Milk", "Soda", "Bottled Water" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        DrinksList.addMouseListener(new java.awt.event.MouseAdapter() {
+        Rice.setBackground(new java.awt.Color(204, 102, 0));
+        Rice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DrinksListMouseClicked(evt);
+                RiceMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                RiceMousePressed(evt);
             }
         });
-        jScrollPane2.setViewportView(DrinksList);
+        Rice.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        items.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, 210, 170));
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel6.setText("            Rice Meals");
+        Rice.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
 
-        left.add(items, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 115, 1000, 750));
+        items.add(Rice, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 85, 300, 65));
+
+        Cakes.setBackground(new java.awt.Color(204, 102, 0));
+        Cakes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CakesMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CakesMousePressed(evt);
+            }
+        });
+        Cakes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel5.setText(" Cakes and Cheesecakes");
+        Cakes.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Cakes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 300, 65));
+
+        Pizza.setBackground(new java.awt.Color(204, 102, 0));
+        Pizza.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PizzaMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PizzaMousePressed(evt);
+            }
+        });
+        Pizza.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel7.setText("                Pizza");
+        Pizza.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Pizza, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 300, 65));
+
+        Pasta.setBackground(new java.awt.Color(204, 102, 0));
+        Pasta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PastaMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PastaMousePressed(evt);
+            }
+        });
+        Pasta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel8.setText("                Pasta");
+        Pasta.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Pasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 235, 300, 65));
+
+        Drinks.setBackground(new java.awt.Color(204, 102, 0));
+        Drinks.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DrinksMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                DrinksMousePressed(evt);
+            }
+        });
+        Drinks.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel10.setText("               Drinks");
+        Drinks.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Drinks, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 385, 300, 65));
+
+        Others.setBackground(new java.awt.Color(204, 102, 0));
+        Others.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OthersMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                OthersMousePressed(evt);
+            }
+        });
+        Others.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel9.setText("               Others");
+        Others.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Others, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, 65));
+
+        Yogurt.setBackground(new java.awt.Color(204, 102, 0));
+        Yogurt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                YogurtMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                YogurtMousePressed(evt);
+            }
+        });
+        Yogurt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel15.setText("        and Fruit Ades");
+        Yogurt.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 300, -1));
+
+        jLabel18.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel18.setText("      Yogurt Smoothie");
+        Yogurt.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, -1));
+
+        items.add(Yogurt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 300, 65));
+
+        FFS.setBackground(new java.awt.Color(204, 102, 0));
+        FFS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FFSMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                FFSMousePressed(evt);
+            }
+        });
+        FFS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel13.setText("      Fresh Fruit Shakes");
+        FFS.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(FFS, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 300, 65));
+
+        Coffee.setBackground(new java.awt.Color(204, 102, 0));
+        Coffee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CoffeeMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CoffeeMousePressed(evt);
+            }
+        });
+        Coffee.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel14.setText("              Coffee");
+        Coffee.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+
+        items.add(Coffee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 535, 300, 65));
+
+        left.add(items, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 300, 750));
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 55)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 51, 0));
@@ -356,6 +330,9 @@ public class Menu extends javax.swing.JFrame {
         });
         left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 20));
 
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+        left.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 700, 750));
+
         container.add(left, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 865));
 
         right.setBackground(new java.awt.Color(102, 51, 0));
@@ -373,23 +350,38 @@ public class Menu extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 204, 153));
         jLabel11.setText("Subtotal");
-        right.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
-        right.add(OrderName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 30));
-        right.add(Quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 100, 30));
+        right.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, -1));
+
+        OrderName.setEditable(false);
+        OrderName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderNameActionPerformed(evt);
+            }
+        });
+        right.add(OrderName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 220, 30));
+
+        Quantity.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                QuantityStateChanged(evt);
+            }
+        });
+        right.add(Quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 100, 30));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 204, 153));
         jLabel16.setText("Quantity");
-        right.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
-        right.add(Subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 50, 130, 30));
+        right.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
-        Add2Cart.setText("Clear");
-        Add2Cart.addActionListener(new java.awt.event.ActionListener() {
+        Subtotal.setEditable(false);
+        right.add(Subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 130, 30));
+
+        Clear.setText("Clear");
+        Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Add2CartActionPerformed(evt);
+                ClearActionPerformed(evt);
             }
         });
-        right.add(Add2Cart, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 140, 30));
+        right.add(Clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 140, 30));
 
         Cart.setBackground(new java.awt.Color(255, 204, 153));
         Cart.setModel(new javax.swing.table.DefaultTableModel(
@@ -397,11 +389,11 @@ public class Menu extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Item", "Quantity", "Price", "Subtotal"
+                "Item", "Price", "Quantity", "Subtotal"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -410,33 +402,38 @@ public class Menu extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Cart);
 
-        right.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+        right.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 440, 350));
 
-        jLabel17.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 55)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 204, 153));
-        jLabel17.setText("--");
-        right.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, -1, -1));
+        OrderNumber.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
+        OrderNumber.setForeground(new java.awt.Color(255, 204, 153));
+        OrderNumber.setText("--");
+        right.add(OrderNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, -1));
 
-        jButton2.setText("Print");
-        right.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 810, 140, 40));
-
-        jButton3.setText("Remove");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Print.setText("Print Receipt");
+        Print.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                PrintActionPerformed(evt);
             }
         });
-        right.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 810, 140, 40));
+        right.add(Print, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 810, 140, 40));
 
-        jLabel30.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 55)); // NOI18N
+        Remove.setText("Remove");
+        Remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RemoveActionPerformed(evt);
+            }
+        });
+        right.add(Remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, 140, 40));
+
+        jLabel30.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 204, 153));
         jLabel30.setText("Your Order#");
-        right.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+        right.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 280, 60));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 204, 153));
         jLabel31.setText("Order name");
-        right.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        right.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
 
         Add2Cart1.setText("Add to Cart");
         Add2Cart1.addActionListener(new java.awt.event.ActionListener() {
@@ -444,31 +441,63 @@ public class Menu extends javax.swing.JFrame {
                 Add2Cart1ActionPerformed(evt);
             }
         });
-        right.add(Add2Cart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 140, 30));
+        right.add(Add2Cart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 140, 30));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 204, 153));
         jLabel12.setText("Price");
-        right.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
-        right.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 110, 30));
+        right.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+
+        Price.setEditable(false);
+        right.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 110, 30));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 204, 153));
-        jLabel32.setText("Pay:");
-        right.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 700, -1, -1));
-        right.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 700, 110, -1));
+        jLabel32.setText("Amount Paid:");
+        right.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 740, -1, -1));
+        right.add(PayAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 740, 110, -1));
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 204, 153));
         jLabel33.setText("Total:");
-        right.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 700, -1, -1));
-        right.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 700, 110, -1));
+        right.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 700, -1, -1));
+        right.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 700, 110, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 204, 153));
         jLabel34.setText("Change:");
-        right.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 740, -1, -1));
-        right.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 740, 110, -1));
+        right.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 700, -1, -1));
+        right.add(Change, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 700, 110, -1));
+
+        Pay.setText("Pay");
+        Pay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PayActionPerformed(evt);
+            }
+        });
+        right.add(Pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 740, 110, 30));
+
+        TakeOut.setText("Take Out");
+        TakeOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TakeOutActionPerformed(evt);
+            }
+        });
+        right.add(TakeOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 640, 140, 40));
+
+        DineIN.setText("Dine In");
+        DineIN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DineINActionPerformed(evt);
+            }
+        });
+        right.add(DineIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 590, 140, 40));
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel35.setText("Service:");
+        right.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 600, -1, -1));
+        right.add(Service, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 630, 120, -1));
 
         container.add(right, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 0, 540, 865));
 
@@ -476,39 +505,385 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void Connect(){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/pastryproject", "root", "");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void OrderNum(){
+        try{
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT MAX(OrderID) FROM pastryproject");
+            rs.next();
+            
+            rs.getString("MAX(OrderID)");
+            
+            if(rs.getString("MAX(OrderID)") == null){
+                OrderNumber.setText("0001");
+            }else{
+                long id = Long.parseLong(rs.getString("MAX(OrderID)").substring(2, rs.getString("MAX(OrderID)").length()));
+                id++;
+                OrderNumber.setText(String.format("%04d", id));
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         Home_OrderPastry home = new Home_OrderPastry();
         home.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
     private void Add2Cart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add2Cart1ActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model = new DefaultTableModel();
+        
+        model = (DefaultTableModel)Cart.getModel();
+        model.addRow(new Object[]{
+            
+            OrderName.getText(), Price.getText(), Quantity.getValue().toString(), Subtotal.getText()
+        });
+        
+        double sum = 0;
+        
+        for (int i = 0; i < Cart.getRowCount(); i++){
+            sum = sum + Double.parseDouble(Cart.getValueAt(i, 3).toString());
+        }
+        
+        Total.setText(Double.toString(sum));
     }//GEN-LAST:event_Add2Cart1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    public void Change() {
+        double total = Double.parseDouble(Total.getText());
+        double pay = Double.parseDouble(PayAmount.getText());
+        
+        double chng = pay - total;
+        
+        Change.setText(String.valueOf(chng));
+    }
+    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
+        
+        DefaultTableModel model = new DefaultTableModel();
+        
+        model = (DefaultTableModel)Cart.getModel();
+        model.removeRow(Cart.getSelectedRow());
+        
+        double sum = 0;
+        for (int i = 0; i < Cart.getRowCount(); i++){
+            sum = sum + Double.parseDouble(Cart.getValueAt(i, 3).toString());
+        }
+        
+        Total.setText(Double.toString(sum));
+    }//GEN-LAST:event_RemoveActionPerformed
 
-    private void Add2CartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add2CartActionPerformed
-
-    }//GEN-LAST:event_Add2CartActionPerformed
+    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+        OrderName.setText("");
+        Price.setText("");
+        Subtotal.setText("");
+        Quantity.setValue(0);
+    }//GEN-LAST:event_ClearActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
-    DefaultListModel m = DefaultListmodel();
-    private void DrinksListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DrinksListMouseClicked
-        String data = DrinksList.getSelectedValue().toString();
+
+    private void CakesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CakesMousePressed
+        Cakes.setBackground(ClickedColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_CakesMousePressed
+
+    private void RiceMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RiceMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(ClickedColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_RiceMousePressed
+
+    private void PizzaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PizzaMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(ClickedColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_PizzaMousePressed
+
+    private void PastaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PastaMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(ClickedColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_PastaMousePressed
+
+    private void OthersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OthersMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(ClickedColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_OthersMousePressed
+
+    private void DrinksMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DrinksMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(ClickedColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_DrinksMousePressed
+
+    private void FFSMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FFSMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(ClickedColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_FFSMousePressed
+
+    private void CoffeeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoffeeMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(ClickedColor);
+        Yogurt.setBackground(DefaultColor);
+    }//GEN-LAST:event_CoffeeMousePressed
+
+    private void YogurtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_YogurtMousePressed
+        Cakes.setBackground(DefaultColor);
+        Rice.setBackground(DefaultColor);
+        Pizza.setBackground(DefaultColor);
+        Pasta.setBackground(DefaultColor);
+        Others.setBackground(DefaultColor);
+        Drinks.setBackground(DefaultColor);
+        FFS.setBackground(DefaultColor);
+        Coffee.setBackground(DefaultColor);
+        Yogurt.setBackground(ClickedColor);
+    }//GEN-LAST:event_YogurtMousePressed
+
+    private void CakesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CakesMouseClicked
+        CakesItems cakes = new CakesItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(cakes).setVisible(true);
+    }//GEN-LAST:event_CakesMouseClicked
+
+    private void RiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RiceMouseClicked
+        RiceItems rice = new RiceItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(rice).setVisible(true);
+    }//GEN-LAST:event_RiceMouseClicked
+
+    private void PizzaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PizzaMouseClicked
+        PizzaItems pizza = new PizzaItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(pizza).setVisible(true);
+    }//GEN-LAST:event_PizzaMouseClicked
+
+    private void PastaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PastaMouseClicked
+        PastaItems pasta = new PastaItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(pasta).setVisible(true);
+    }//GEN-LAST:event_PastaMouseClicked
+
+    private void OthersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OthersMouseClicked
+        OthersItems others = new OthersItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(others).setVisible(true);
+    }//GEN-LAST:event_OthersMouseClicked
+
+    private void DrinksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DrinksMouseClicked
+        DrinksItems drinks = new DrinksItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(drinks).setVisible(true);
+    }//GEN-LAST:event_DrinksMouseClicked
+
+    private void FFSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FFSMouseClicked
+        FFShakesItems ffs = new FFShakesItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(ffs).setVisible(true);
+    }//GEN-LAST:event_FFSMouseClicked
+
+    private void CoffeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoffeeMouseClicked
+        CoffeeItems coffee = new CoffeeItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(coffee).setVisible(true);
+    }//GEN-LAST:event_CoffeeMouseClicked
+
+    private void YogurtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_YogurtMouseClicked
+        NonCoffeeItems coffee = new NonCoffeeItems();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(coffee).setVisible(true);
+    }//GEN-LAST:event_YogurtMouseClicked
+
+    private void OrderNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderNameActionPerformed
+
+    }//GEN-LAST:event_OrderNameActionPerformed
+
+    private void QuantityStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_QuantityStateChanged
+        int qty = Integer.parseInt(Quantity.getValue().toString());
+        if (qty < 0){
+           Quantity.setValue(0);
+        }else {
+            double price = Double.parseDouble(Price.getText());
+            Subtotal.setText(String.valueOf(qty * price));
+        }
+    }//GEN-LAST:event_QuantityStateChanged
+
+    private void PayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PayActionPerformed
+        Change();
         
-        m.addElement (data);
+        String num = OrderNumber.getText();
+        String serv = Service.getText();
+        String total = Total.getText();
+        String amnt = PayAmount.getText();
         
-        OrderName.setText(m);
-    }//GEN-LAST:event_DrinksListMouseClicked
+    }//GEN-LAST:event_PayActionPerformed
+
+    public void Database(){
+        
+        try {
+            String num = OrderNumber.getText();
+            String serv = Service.getText();
+            String total = Total.getText();
+            String amnt = PayAmount.getText();
+            String chng = Change.getText();
+            
+            pst = con.prepareStatement("INSERT INTO pastryproject(OrderID, Service, Total, AmountPaid, ChangeAmount)values(?,?,?,?,?)");
+            
+            pst.setString(1, num);
+            pst.setString(2, serv);
+            pst.setString(3, total);
+            pst.setString(4, amnt);
+            pst.setString(5, chng);
+            pst.executeUpdate();
+            OrderNum();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    private void PrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintActionPerformed
+        SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = new Date();
+        String todaydate = dFormat.format(date);
+        String total = String.valueOf(Total);
+        
+        
+        String path = "F:\\";
+        com.itextpdf.text.Document doc = new com.itextpdf.text.Document();
+        try{
+            PdfWriter.getInstance(doc, new FileOutputStream(path + "Order Receipt " + OrderNumber.getText() + ".pdf"));
+            doc.open();
+            Paragraph pastryName = new Paragraph("                                                               PASTRY PROJECT\n");
+            doc.add(pastryName);
+            Paragraph bakeshop = new Paragraph("                                                                 Bakeshop & Cafe\n");
+            doc.add(bakeshop);
+            Paragraph contact = new Paragraph("                                                        Contact No. 0938-796-2033\n");
+            doc.add(contact);
+            Paragraph dadate = new Paragraph("                                                      " + date);
+            doc.add(dadate);
+            Paragraph line = new Paragraph("----------------------------------------------------------------------------------------------------------------------------------\n");
+            doc.add(line);
+            Paragraph service = new Paragraph("                                                                         " + Service.getText() + "\n");
+            doc.add(service);
+            Paragraph ordernum = new Paragraph("                                                                     Order# " + OrderNumber.getText() + "\n");
+            doc.add(ordernum);
+            Paragraph space = new Paragraph("                                                                                                                               ");
+            doc.add(space);
+            PdfPTable tbl = new PdfPTable(4);
+            tbl.addCell("Item");
+            tbl.addCell("Price");
+            tbl.addCell("Quantity");
+            tbl.addCell("Subtotal");
+            for (int i = 0; i < Cart.getRowCount(); i++){
+                String n = Cart.getValueAt(i, 0).toString();
+                String d = Cart.getValueAt(i, 1).toString();
+                String r = Cart.getValueAt(i, 2).toString();
+                String q = Cart.getValueAt(i, 3).toString();
+                
+                tbl.addCell(n);
+                tbl.addCell(d);
+                tbl.addCell(r);
+                tbl.addCell(q);
+            }
+            doc.add(tbl);
+            doc.add(line);
+            Paragraph orderTotal = new Paragraph("                                                                                                     Total: " + Total.getText() + "\n");
+            doc.add(orderTotal);
+            Paragraph orderPay = new Paragraph("                                                                                          Amount Paid: " + PayAmount.getText() + "\n");
+            doc.add(orderPay);
+            Paragraph orderChange = new Paragraph("                                                                                               Change: " + Change.getText() + "\n");
+            doc.add(orderChange);
+            doc.add(line);
+            Paragraph msg = new Paragraph("                                                          Thank You for Your Order!\n");
+            doc.add(msg);
+            Paragraph updated = new Paragraph("                                                                    Stay Updated @\n");
+            doc.add(updated);
+            Paragraph fbpage = new Paragraph("                                                        facebook.com/pastryproject.bc\n");
+            doc.add(fbpage);
+            Paragraph insta = new Paragraph("                                                        instagram.com/pastryproject.bc\n");
+            doc.add(insta);
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        doc.close();
+        setVisible(false);
+        
+        Database();
+    }//GEN-LAST:event_PrintActionPerformed
+
+    private void TakeOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TakeOutActionPerformed
+        String service = "Take Out";
+        
+        Service.setText(service);
+    }//GEN-LAST:event_TakeOutActionPerformed
+
+    private void DineINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DineINActionPerformed
+        String service = "Dine In";
+        
+        Service.setText(service);
+    }//GEN-LAST:event_DineINActionPerformed
 
     /**
      * @param args the command line arguments
@@ -546,79 +921,62 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Add2Cart;
     private javax.swing.JButton Add2Cart1;
-    private javax.swing.JTable Cart;
-    private javax.swing.JList<String> DrinksList;
-    private javax.swing.JTextField OrderName;
-    private javax.swing.JTextField Price;
+    private javax.swing.JPanel Cakes;
+    public static javax.swing.JTable Cart;
+    private javax.swing.JTextField Change;
+    private javax.swing.JButton Clear;
+    private javax.swing.JPanel Coffee;
+    private javax.swing.JButton DineIN;
+    private javax.swing.JPanel Drinks;
+    private javax.swing.JPanel FFS;
+    public static javax.swing.JTextField OrderName;
+    private javax.swing.JLabel OrderNumber;
+    private javax.swing.JPanel Others;
+    private javax.swing.JPanel Pasta;
+    private javax.swing.JButton Pay;
+    private javax.swing.JTextField PayAmount;
+    private javax.swing.JPanel Pizza;
+    public static javax.swing.JTextField Price;
+    private javax.swing.JButton Print;
     private javax.swing.JSpinner Quantity;
+    private javax.swing.JButton Remove;
+    private javax.swing.JPanel Rice;
+    private javax.swing.JTextField Service;
     private javax.swing.JTextField Subtotal;
+    private javax.swing.JButton TakeOut;
+    private javax.swing.JTextField Total;
+    private javax.swing.JPanel Yogurt;
     private javax.swing.JPanel container;
     private javax.swing.JPanel items;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane20;
-    private javax.swing.JScrollPane jScrollPane21;
-    private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane23;
-    private javax.swing.JScrollPane jScrollPane24;
-    private javax.swing.JTable jTable10;
-    private javax.swing.JTable jTable11;
-    private javax.swing.JTable jTable12;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTable jTable7;
-    private javax.swing.JTable jTable8;
-    private javax.swing.JTable jTable9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel left;
     private javax.swing.JPanel right;
     // End of variables declaration//GEN-END:variables
 
-    private DefaultListModel DefaultListmodel() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
 }

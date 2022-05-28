@@ -5,7 +5,7 @@
 package pastry.project;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
-import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -34,37 +34,37 @@ public class CakesItems extends javax.swing.JInternalFrame {
 
         CakesItems = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        ChocoGanacheLag = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        ChocoSmoresLag = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        ChocoCaramelLag = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
+        ChocoGanacheL = new javax.swing.JButton();
+        GanacheSlice = new javax.swing.JButton();
+        SmoresSlice = new javax.swing.JButton();
+        ChocoSmoresL = new javax.swing.JButton();
+        CaramelSlice = new javax.swing.JButton();
+        ChocoCaramelL = new javax.swing.JButton();
+        OreoSlice = new javax.swing.JButton();
+        ChocoOreoL = new javax.swing.JButton();
+        TiramisuSlice = new javax.swing.JButton();
+        TiramisuL = new javax.swing.JButton();
+        RedVelvetSlice = new javax.swing.JButton();
+        RedVelvetL = new javax.swing.JButton();
+        CarrotSlice = new javax.swing.JButton();
+        StrawberrySlice = new javax.swing.JButton();
+        BlueberrySlice = new javax.swing.JButton();
+        CarrotL = new javax.swing.JButton();
+        StrawberryL = new javax.swing.JButton();
+        BlueberryL = new javax.swing.JButton();
+        MousseSlice = new javax.swing.JButton();
+        MousseL = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         ChocoGanacheReg = new javax.swing.JButton();
         ChocoSmoresReg = new javax.swing.JButton();
         ChocoCaramelReg = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
+        ChocoOreoReg = new javax.swing.JButton();
+        TiramisuReg = new javax.swing.JButton();
+        RedVelvetReg = new javax.swing.JButton();
+        CarrotReg = new javax.swing.JButton();
+        StrawberryReg = new javax.swing.JButton();
+        BlueberryReg = new javax.swing.JButton();
+        MousseReg = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -76,80 +76,165 @@ public class CakesItems extends javax.swing.JInternalFrame {
         jLabel11.setText("Slice cake and Cheesecake");
         CakesItems.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, -1, -1));
 
-        ChocoGanacheLag.setText("Chocolate Ganache Cake - L");
-        CakesItems.add(ChocoGanacheLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 40));
-
-        jButton8.setText("Chocolate Ganache Cake");
-        CakesItems.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, -1, 40));
-
-        jButton9.setText("Chocolate Smores Cake");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        ChocoGanacheL.setText("Chocolate Ganache Cake - L");
+        ChocoGanacheL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                ChocoGanacheLActionPerformed(evt);
             }
         });
-        CakesItems.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, -1, 40));
+        CakesItems.add(ChocoGanacheL, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 40));
 
-        ChocoSmoresLag.setText("Chocolate Smores Cake - L");
-        CakesItems.add(ChocoSmoresLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, 40));
-
-        jButton11.setText("Chocolate Caramel Cake");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        GanacheSlice.setText("Chocolate Ganache Cake");
+        GanacheSlice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                GanacheSliceActionPerformed(evt);
             }
         });
-        CakesItems.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, -1, 40));
+        CakesItems.add(GanacheSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, -1, 40));
 
-        ChocoCaramelLag.setText("Chocolate Caramel Cake - L");
-        CakesItems.add(ChocoCaramelLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, 40));
-
-        jButton13.setText("Chocolate Oreo Cake");
-        CakesItems.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, -1, 40));
-
-        jButton14.setText("Chocolate Oreo Cake - L");
-        CakesItems.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, 40));
-
-        jButton15.setText("Tiramisu Cake");
-        CakesItems.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 590, -1, 40));
-
-        jButton16.setText("Tiramisu Cake - L");
-        CakesItems.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, 40));
-
-        jButton17.setText("Red Velvet Cake");
-        CakesItems.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, 40));
-
-        jButton18.setText("Red Velvet Cake - L");
-        CakesItems.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 40));
-
-        jButton19.setText("Carrot Cake");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        SmoresSlice.setText("Chocolate Smores Cake");
+        SmoresSlice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                SmoresSliceActionPerformed(evt);
             }
         });
-        CakesItems.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 640, -1, 40));
+        CakesItems.add(SmoresSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, -1, 40));
 
-        jButton20.setText("Strawberry Pistachio Cake");
-        CakesItems.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, -1, 40));
+        ChocoSmoresL.setText("Chocolate Smores Cake - L");
+        ChocoSmoresL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoSmoresLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(ChocoSmoresL, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, 40));
 
-        jButton21.setText("Blueberry Cheesecake");
-        CakesItems.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 640, -1, 40));
+        CaramelSlice.setText("Chocolate Caramel Cake");
+        CaramelSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaramelSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(CaramelSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, -1, 40));
 
-        jButton22.setText("Carrot Cake - L");
-        CakesItems.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, 40));
+        ChocoCaramelL.setText("Chocolate Caramel Cake - L");
+        ChocoCaramelL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoCaramelLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(ChocoCaramelL, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, 40));
 
-        jButton23.setText("Strawberry Pistachio Cake - L");
-        CakesItems.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, 40));
+        OreoSlice.setText("Chocolate Oreo Cake");
+        OreoSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OreoSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(OreoSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, -1, 40));
 
-        jButton24.setText("Blueberry Cheesecake - L");
-        CakesItems.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, 40));
+        ChocoOreoL.setText("Chocolate Oreo Cake - L");
+        ChocoOreoL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoOreoLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(ChocoOreoL, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, 40));
 
-        jButton25.setText("Chocolate Mousse");
-        CakesItems.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 690, -1, 40));
+        TiramisuSlice.setText("Tiramisu Cake");
+        TiramisuSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TiramisuSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(TiramisuSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 590, -1, 40));
 
-        jButton26.setText("Chocolate Mousse - L");
-        CakesItems.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, 40));
+        TiramisuL.setText("Tiramisu Cake - L");
+        TiramisuL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TiramisuLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(TiramisuL, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, 40));
+
+        RedVelvetSlice.setText("Red Velvet Cake");
+        RedVelvetSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RedVelvetSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(RedVelvetSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, 40));
+
+        RedVelvetL.setText("Red Velvet Cake - L");
+        RedVelvetL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RedVelvetLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(RedVelvetL, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 40));
+
+        CarrotSlice.setText("Carrot Cake");
+        CarrotSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CarrotSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(CarrotSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 640, -1, 40));
+
+        StrawberrySlice.setText("Strawberry Pistachio Cake");
+        StrawberrySlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawberrySliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(StrawberrySlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, -1, 40));
+
+        BlueberrySlice.setText("Blueberry Cheesecake");
+        BlueberrySlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueberrySliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(BlueberrySlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 640, -1, 40));
+
+        CarrotL.setText("Carrot Cake - L");
+        CarrotL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CarrotLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(CarrotL, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, 40));
+
+        StrawberryL.setText("Strawberry Pistachio Cake - L");
+        StrawberryL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawberryLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(StrawberryL, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, 40));
+
+        BlueberryL.setText("Blueberry Cheesecake - L");
+        BlueberryL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueberryLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(BlueberryL, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, 40));
+
+        MousseSlice.setText("Chocolate Mousse");
+        MousseSlice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MousseSliceActionPerformed(evt);
+            }
+        });
+        CakesItems.add(MousseSlice, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 690, -1, 40));
+
+        MousseL.setText("Chocolate Mousse - L");
+        MousseL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MousseLActionPerformed(evt);
+            }
+        });
+        CakesItems.add(MousseL, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, 40));
 
         jLabel12.setBackground(new java.awt.Color(204, 102, 0));
         jLabel12.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
@@ -165,31 +250,76 @@ public class CakesItems extends javax.swing.JInternalFrame {
         CakesItems.add(ChocoGanacheReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, 40));
 
         ChocoSmoresReg.setText("Chocolate Smores Cake - R");
+        ChocoSmoresReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoSmoresRegActionPerformed(evt);
+            }
+        });
         CakesItems.add(ChocoSmoresReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, -1, 40));
 
         ChocoCaramelReg.setText("Chocolate Caramel Cake - R");
+        ChocoCaramelReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoCaramelRegActionPerformed(evt);
+            }
+        });
         CakesItems.add(ChocoCaramelReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, 40));
 
-        jButton30.setText("Chocolate Oreo Cake - R");
-        CakesItems.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, 40));
+        ChocoOreoReg.setText("Chocolate Oreo Cake - R");
+        ChocoOreoReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChocoOreoRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(ChocoOreoReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, 40));
 
-        jButton31.setText("Tiramisu Cake - R");
-        CakesItems.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, 40));
+        TiramisuReg.setText("Tiramisu Cake - R");
+        TiramisuReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TiramisuRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(TiramisuReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, 40));
 
-        jButton32.setText("Red Velvet Cake - R");
-        CakesItems.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, -1, 40));
+        RedVelvetReg.setText("Red Velvet Cake - R");
+        RedVelvetReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RedVelvetRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(RedVelvetReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, -1, 40));
 
-        jButton33.setText("Carrot Cake - R");
-        CakesItems.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, -1, 40));
+        CarrotReg.setText("Carrot Cake - R");
+        CarrotReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CarrotRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(CarrotReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, -1, 40));
 
-        jButton34.setText("Strawberry Pistachio Cake - R");
-        CakesItems.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, 40));
+        StrawberryReg.setText("Strawberry Pistachio Cake - R");
+        StrawberryReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrawberryRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(StrawberryReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, 40));
 
-        jButton35.setText("Blueberry Cheesecake - R");
-        CakesItems.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, 40));
+        BlueberryReg.setText("Blueberry Cheesecake - R");
+        BlueberryReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlueberryRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(BlueberryReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, 40));
 
-        jButton36.setText("Chocolate Mousse - R");
-        CakesItems.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, 40));
+        MousseReg.setText("Chocolate Mousse - R");
+        MousseReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MousseRegActionPerformed(evt);
+            }
+        });
+        CakesItems.add(MousseReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,56 +337,280 @@ public class CakesItems extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void SmoresSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SmoresSliceActionPerformed
+        double PriceofItem = 85.00;
+        String NameofItem = "Chocolate Smores Cake - Slice";
+       
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+        
+    }//GEN-LAST:event_SmoresSliceActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void CaramelSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaramelSliceActionPerformed
+        double PriceofItem = 90.00;
+        String NameofItem = "Chocolate Caramel Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CaramelSliceActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    private void CarrotSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarrotSliceActionPerformed
+        double PriceofItem = 95.00;
+        String NameofItem = "Carrot Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CarrotSliceActionPerformed
 
     private void ChocoGanacheRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoGanacheRegActionPerformed
-
-
+        double PriceofItem = 395.00;
+        String NameofItem = "Chocolate Ganache Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
     }//GEN-LAST:event_ChocoGanacheRegActionPerformed
+
+    private void ChocoGanacheLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoGanacheLActionPerformed
+        double PriceofItem = 710.00;
+        String NameofItem = "Chocolate Ganache Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoGanacheLActionPerformed
+
+    private void ChocoSmoresRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoSmoresRegActionPerformed
+        double PriceofItem = 395.00;
+        String NameofItem = "Chocolate Smores Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoSmoresRegActionPerformed
+
+    private void ChocoSmoresLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoSmoresLActionPerformed
+        double PriceofItem = 710.00;
+        String NameofItem = "Chocolate Smores Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoSmoresLActionPerformed
+
+    private void ChocoCaramelRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoCaramelRegActionPerformed
+        double PriceofItem = 435.00;
+        String NameofItem = "Chocolate Caramel Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoCaramelRegActionPerformed
+
+    private void ChocoCaramelLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoCaramelLActionPerformed
+        double PriceofItem = 760.00;
+        String NameofItem = "Chocolate Caramel - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoCaramelLActionPerformed
+
+    private void ChocoOreoRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoOreoRegActionPerformed
+        double PriceofItem = 435.00;
+        String NameofItem = "Chocolate Oreo Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoOreoRegActionPerformed
+
+    private void ChocoOreoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChocoOreoLActionPerformed
+        double PriceofItem = 460.00;
+        String NameofItem = "Chocolate Oreo Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_ChocoOreoLActionPerformed
+
+    private void TiramisuRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiramisuRegActionPerformed
+        double PriceofItem = 445.00;
+        String NameofItem = "Tiramisu Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TiramisuRegActionPerformed
+
+    private void RedVelvetRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedVelvetRegActionPerformed
+        double PriceofItem = 445.00;
+        String NameofItem = "Red Velvet Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_RedVelvetRegActionPerformed
+
+    private void RedVelvetLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedVelvetLActionPerformed
+        double PriceofItem = 810.00;
+        String NameofItem = "Red Velvet Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_RedVelvetLActionPerformed
+
+    private void CarrotRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarrotRegActionPerformed
+        double PriceofItem = 465.00;
+        String NameofItem = "Carrot Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CarrotRegActionPerformed
+
+    private void CarrotLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarrotLActionPerformed
+        double PriceofItem = 860.00;
+        String NameofItem = "Carrot Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_CarrotLActionPerformed
+
+    private void StrawberryRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberryRegActionPerformed
+        double PriceofItem = 465.00;
+        String NameofItem = "Strawberry Pistachio Cake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawberryRegActionPerformed
+
+    private void StrawberryLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberryLActionPerformed
+        double PriceofItem = 860.00;
+        String NameofItem = "Strawberry Pistachio Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawberryLActionPerformed
+
+    private void BlueberryRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueberryRegActionPerformed
+        double PriceofItem = 615.00;
+        String NameofItem = "Blueberry Cheesecake - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueberryRegActionPerformed
+
+    private void BlueberryLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueberryLActionPerformed
+        double PriceofItem = 1125.00;
+        String NameofItem = "Blueberry Cheesecake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueberryLActionPerformed
+
+    private void MousseRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MousseRegActionPerformed
+        double PriceofItem = 500.00;
+        String NameofItem = "Chocolate Mousse - Regular";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MousseRegActionPerformed
+
+    private void MousseLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MousseLActionPerformed
+        double PriceofItem = 965.00;
+        String NameofItem = "Chocolate Mousse - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MousseLActionPerformed
+
+    private void GanacheSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GanacheSliceActionPerformed
+        double PriceofItem = 85.00;
+        String NameofItem = "Chocolate Ganache Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_GanacheSliceActionPerformed
+
+    private void OreoSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OreoSliceActionPerformed
+        double PriceofItem = 90.00;
+        String NameofItem = "Chocolate Oreo Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_OreoSliceActionPerformed
+
+    private void TiramisuSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiramisuSliceActionPerformed
+        double PriceofItem = 90.00;
+        String NameofItem = "Tiramisu Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TiramisuSliceActionPerformed
+
+    private void RedVelvetSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedVelvetSliceActionPerformed
+        double PriceofItem = 90.00;
+        String NameofItem = "Red Velvet Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_RedVelvetSliceActionPerformed
+
+    private void StrawberrySliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberrySliceActionPerformed
+        double PriceofItem = 95.00;
+        String NameofItem = "Strawberry Pistachio Cake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_StrawberrySliceActionPerformed
+
+    private void BlueberrySliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueberrySliceActionPerformed
+        double PriceofItem = 115.00;
+        String NameofItem = "Blueberry Cheesecake - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_BlueberrySliceActionPerformed
+
+    private void MousseSliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MousseSliceActionPerformed
+        double PriceofItem = 95.00;
+        String NameofItem = "Chocolate Mousse - Slice";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_MousseSliceActionPerformed
+
+    private void TiramisuLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiramisuLActionPerformed
+        double PriceofItem = 810.00;
+        String NameofItem = "Tiramisu Cake - Large";
+        
+        Menu.OrderName.setText(NameofItem);
+        Menu.Price.setText(Double.toString(PriceofItem));
+    }//GEN-LAST:event_TiramisuLActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BlueberryL;
+    private javax.swing.JButton BlueberryReg;
+    private javax.swing.JButton BlueberrySlice;
     private javax.swing.JPanel CakesItems;
-    private javax.swing.JButton ChocoCaramelLag;
+    private javax.swing.JButton CaramelSlice;
+    private javax.swing.JButton CarrotL;
+    private javax.swing.JButton CarrotReg;
+    private javax.swing.JButton CarrotSlice;
+    private javax.swing.JButton ChocoCaramelL;
     private javax.swing.JButton ChocoCaramelReg;
-    private javax.swing.JButton ChocoGanacheLag;
+    private javax.swing.JButton ChocoGanacheL;
     private javax.swing.JButton ChocoGanacheReg;
-    private javax.swing.JButton ChocoSmoresLag;
+    private javax.swing.JButton ChocoOreoL;
+    private javax.swing.JButton ChocoOreoReg;
+    private javax.swing.JButton ChocoSmoresL;
     private javax.swing.JButton ChocoSmoresReg;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton GanacheSlice;
+    private javax.swing.JButton MousseL;
+    private javax.swing.JButton MousseReg;
+    private javax.swing.JButton MousseSlice;
+    private javax.swing.JButton OreoSlice;
+    private javax.swing.JButton RedVelvetL;
+    private javax.swing.JButton RedVelvetReg;
+    private javax.swing.JButton RedVelvetSlice;
+    private javax.swing.JButton SmoresSlice;
+    private javax.swing.JButton StrawberryL;
+    private javax.swing.JButton StrawberryReg;
+    private javax.swing.JButton StrawberrySlice;
+    private javax.swing.JButton TiramisuL;
+    private javax.swing.JButton TiramisuReg;
+    private javax.swing.JButton TiramisuSlice;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     // End of variables declaration//GEN-END:variables
